@@ -1,0 +1,34 @@
+/* Precedence is IMPORTANT in some cases */
+
+/* We'll use this to determine which media query is active */
+.media-query:after {
+  content: "No Media Query";
+}
+
+/* We'll see here that ORDER MATTERS */
+@media screen and (max-width: 600px) {
+  body {
+    background: green;
+  }
+  .media-query:after {
+    content: "SMALL, max-width: 600px";
+  }
+}
+
+@media screen and (min-width: 801px) {
+  body {
+    background: purple;
+  }
+  .media-query:after {
+    content: "LARGE, min-width: 801px";
+  }
+}
+
+@media screen and (min-width: 601px) {
+  body {
+    background: orange;
+  }
+  .media-query:after {
+    content: "MEDIUM, min-width: 601px";
+  }
+}

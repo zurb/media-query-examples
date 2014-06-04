@@ -1,0 +1,9 @@
+.panel {
+  background: #cfcfcf;
+}
+
+@media screen and (max-width: 640px) {
+  .panel {
+    display: none;
+  }
+}

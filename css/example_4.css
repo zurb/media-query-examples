@@ -1,0 +1,82 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+/* Disable the nav bar by default */
+#menu {
+  display: none;
+}
+
+/* Display the nav bar and hide offcanvas on large screens */
+@media screen and (min-width: 1024px) {
+  #menu {
+    display: inherit;
+  }
+  #offcanvas-menu {
+    display: none;
+  }
+}
+
+/* On larger screens make the panels be side by side */
+@media screen and (min-width: 641px) {
+  /* 2 col layout */
+  .panel {
+    float: left;
+    width: 50%;
+  }
+}
+
+/* Offcanvas implementation */
+#offcanvas-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 13.755em;
+  right: -13.755em;
+  height: 100%;
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-transition: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
+  transition: 0.15s ease;
+}
+
+#offcanvas-menu.active {
+  -webkit-transform: translate(-13.755em, 0px);
+  -moz-transform: translate(-13.755em, 0px);
+  -o-transform: translate(-13.755em, 0px);
+  -ms-transform: translate(-13.755em, 0px);
+  transform: translate(-13.755em, 0px);
+}
+.offcanvas-container {
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-transition: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
+  transition: 0.15s ease;
+}
+
+.offcanvas-container.active {
+  -webkit-transform: translate(-13.725em, 0px);
+  -moz-transform: translate(-13.725em, 0px);
+  -o-transform: translate(-13.725em, 0px);
+  -ms-transform: translate(-13.725em, 0px);
+  transform: translate(-13.725em, 0px);
+}
+
+.menu-link {
+  position: absolute;
+  left: -100px;
+  display: block;
+  background: green;
+  padding: 10px;
+}
