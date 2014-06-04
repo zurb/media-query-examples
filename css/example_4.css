@@ -1,19 +1,14 @@
-/* apply a natural box layout model to all elements */
-*, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-}
-
 /* Disable the nav bar by default */
-#menu {
+#nav-bar {
   display: none;
 }
 
 /* Display the nav bar and hide offcanvas on large screens */
 @media screen and (min-width: 1024px) {
-  #menu {
+  #nav-bar {
     display: inherit;
   }
-  #offcanvas-menu {
+  #offcanvas {
     display: none;
   }
 }
@@ -25,6 +20,11 @@
     float: left;
     width: 50%;
   }
+}
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
 /* Offcanvas implementation */
