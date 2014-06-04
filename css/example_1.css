@@ -1,17 +1,10 @@
-/* We'll use this to determine which media query is active */
+body {
+  background: green;
+}
 .media-query:after {
-  content: "No Media Query";
+  content: "Default";
 }
 
-/* We'll see here that ORDER MATTERS */
-@media screen and (max-width: 600px) {
-  body {
-    background: green;
-  }
-  .media-query:after {
-    content: "max-width: 600px";
-  }
-}
 
 @media screen and (min-width: 601px) {
   body {
