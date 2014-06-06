@@ -14,8 +14,8 @@ function toggleClass(el, className) {
   }
 }
 
-var menu = document.querySelector("#offcanvas-menu"),
-    container = document.querySelector(".offcanvas-container");
+var menu = document.querySelector("#offcanvas"),
+    container = document.querySelector(".container");
 
 menu.addEventListener("click", function(e){
   e.preventDefault();

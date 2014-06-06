@@ -28,7 +28,7 @@
 }
 
 /* Offcanvas implementation */
-#offcanvas-menu {
+#offcanvas {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -46,14 +46,14 @@
   transition: 0.15s ease;
 }
 
-#offcanvas-menu.active {
+#offcanvas.active {
   -webkit-transform: translate(-13.755em, 0px);
   -moz-transform: translate(-13.755em, 0px);
   -o-transform: translate(-13.755em, 0px);
   -ms-transform: translate(-13.755em, 0px);
   transform: translate(-13.755em, 0px);
 }
-.offcanvas-container {
+.container {
   -webkit-transform: translate(0px, 0px);
   -moz-transform: translate(0px, 0px);
   -o-transform: translate(0px, 0px);
@@ -65,7 +65,7 @@
   transition: 0.15s ease;
 }
 
-.offcanvas-container.active {
+.container.active {
   -webkit-transform: translate(-13.725em, 0px);
   -moz-transform: translate(-13.725em, 0px);
   -o-transform: translate(-13.725em, 0px);
